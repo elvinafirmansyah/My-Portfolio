@@ -10,6 +10,8 @@ import { TbBrandLaravel } from "react-icons/tb";
 import { SiAdobexd, SiAdobephotoshop, SiPhotobucket } from "react-icons/si";
 import { Icon } from '@iconify/react';
 import { FaGit } from "react-icons/fa6";
+import { FaGithub, FaLink } from "react-icons/fa";
+import { Button } from "@/components/ui/button"
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,23 +20,69 @@ const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 function Projects() {
   const projects = [
     {
-      img: "project4",
+      img: "project4.png",
+      language: ["Javascript"],
       title: 'Incriaysc',
-      description: 'Incriaysc is the platform to search any words by JavaScript. Incriaysc is made to make easier all learners, english learners exactly to be more understand what the meaning all words which you need. Made by JavaScript and Tailwind',
-      link: 'https://dictionorycdn.vercel.app/'
+      description: 'Incriaysc is the platform to search any words by JavaScript. Incriaysc is made to make easier all english learners to understand the meaning of a spesific word. Made by JavaScript and Tailwind',
+      link: 'https://incriaysc.vercel.app/'
     },
     {
-      img: "project9",
-      title: 'Dribble API',
-      description: 'Driible API is made by the feature of Dribble itself, i made it by applying the feature of dribble itself. it could be accessed by taking your own token instead of by just taking automatically. I made it for just filling my emptyness as both good as well as knowing how the dribble api is taken immediately on your own web by react itself.',
+      img: "project2.png",
+      language: ["React JS"],
+      title: 'ENews',
+      description: 'Vin News is the project of Implementation API by React JS, that is made for online reader to be interactive within reading those news platforms, and we have CNN News, BBC News, CNBC, VOA. we provide all of those to be used because those platforms have the great news including the most popular platform of news. hopefully you all will be pleased for reading all as both good as well as adding the useful news, Made by React JS',
+      link: 'https://vinnews.vercel.app/'
+    },
+    {
+      img: "project9.png",
+      language: ["React JS"],
+      title: 'VnDribble',
+      description: 'Driible API is made by the feature of Dribble itself, i made it by applying the feature of dribble itself. it could be accessed by taking your own token instead of by just taking automatically.',
       link: 'https://dribblevin.vercel.app/'
     },
     {
-      img: "project2",
-      title: 'News API',
-      description: 'Vin News is the project of Implementation API by React JS, that is made for online reader to be interactive within reading those news platforms, and we have CNN News, BBC News, CNBC, VOA. we provide all of those to be used because those platforms have the great news and included the most popular platform of news. hopefully you all will be pleased for reading all as both good as well as adding the useful news, Made by React JS',
-      link: 'https://dictionorycdn.vercel.app/'
+      img: "project2.png",
+      language: ["Javascript"],
+      title: 'Github User Tracker',
+      description: 'This App is the implementation of API project by JavaScript. You are able to search any users who are already logged in. the result will be found automatically, depends on an user account presence and be able to get the information of the user such as the follower, name, repo, following and the status. Made by JavaScript and Bootstrap',
+      link: 'https://egithubtracker.vercel.app/'
     },
+    {
+      img: "project2.png",
+      language: ["Next JS"],
+      title: 'My Portfolio',
+      description: 'Engxzu is an English learning platform from Indonesia owned by Ladies Of Twins. Founded in 2021 by Elvina Firmansyah with her twin sister, Elvira Firmansyah. Engxzu is an online learning application that provides a place to learn English, which will help students for solving problems in learning English. Made by Bootstrap',
+      link: 'https://engxzu.netlify.app/'
+    },
+    {
+      img: "project2.png",
+      language: ["HTML"],
+      title: 'Engxzu, English Learning Platform',
+      description: 'Engxzu is an English learning platform from Indonesia owned by Ladies Of Twins. Founded in 2021 by Elvina Firmansyah with her twin sister, Elvira Firmansyah. Engxzu is an online learning application that provides a place to learn English, which will help students for solving problems in learning English. Made by Bootstrap',
+      link: 'https://engxzu.netlify.app/'
+    },
+    {
+      img: "project2.png",
+      language: ["UI/UX Design"],
+      title: 'ElMovie | Movie Dashboard Design',
+      description: 'This is my new post on Dribble, i made a dashboard for a movie app platform like Netflix, honestly im inspired by Hulu. ',
+      link: 'https://engxzu.netlify.app/'
+    },
+    {
+      img: "project2.png",
+      language: ["UI/UX Design"],
+      title: 'Shoes App | Mobile Design',
+      description: 'This is one of my posts on Dribble. ',
+      link: 'https://engxzu.netlify.app/'
+    },
+    {
+      img: "project2.png",
+      language: ["UI/UX Design"],
+      title: 'Wallet App | Mobile Design',
+      description: 'This is one of my posts on Dribble. ',
+      link: 'https://engxzu.netlify.app/'
+    },
+    
   ]
   return (
     <main className={`flex flex-col items-center justify-between px-7  md:px-32 py-16`}>
@@ -45,16 +93,28 @@ function Projects() {
         <div className="flex flex-col gap-y-2">
           <h1 className={`font-bold text-6xl ${inter.className}`}>Projects</h1>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {skills.map((skill, idx) => (
-            <div className="bg-glass p-5 rounded-xl" key={idx}>
-              <div className="flex flex-col gap-y-2">
-              {skill.icon}
-              <p className="font-semibold text-lg">{skill.title}</p>
+        <div className="grid grid-cols-1 gap-8">
+          {projects.map((project, idx) => (
+            <div className="hover:cursor-pointer rounded-xl" key={idx}>
+              <div className="flex flex-col lg:flex-row gap-7">
+                <Image src={`/assets/${project.img}`} alt={project.title} className="w-[520px] h-full object-fit rounded-xl" width={650} height={650} />
+                <div className="flex flex-col gap-y-0.5">
+                  {project.language.map((v, idx) => (
+                    <p className="bg-glass w-fit py-1.5 text-sky-400 px-3.5 rounded-full font-bold" key={idx}>{v}</p>
+                  ))}
+                  <h1 className={`font-black text-[30px] ${inter.className}`}>{project.title}</h1>
+                  <p>{}</p>
+                  <p className="text-base">{project.description}</p>
+                  <div className="flex gap-x-3 mt-3">
+                  <Button variant="default" className="flex gap-x-2 text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><FaGithub />{project.language[0] == "UI/UX Design" ? "Dribble" : "Github"}</Button>
+                  <Button variant="default" className="flex gap-x-2 text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><FaLink />Demo</Button>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
+      
       </div>
     </main>
   )
