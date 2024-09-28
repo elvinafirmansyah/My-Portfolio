@@ -20,63 +20,63 @@ const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 function Projects() {
   const projects = [
     {
-      img: "project4.png",
+      img: "project1.png",
       language: ["Javascript"],
       title: 'Incriaysc',
-      description: 'Incriaysc is the platform to search any words by JavaScript. Incriaysc is made to make easier all english learners to understand the meaning of a spesific word. Made by JavaScript and Tailwind',
+      description: 'Incriaysc is a platform for searching any word using JavaScript. It is designed to help English learners easily understand the meaning of specific words. Built with JavaScript and Tailwind.',
       link: 'https://incriaysc.vercel.app/'
     },
     {
       img: "project2.png",
       language: ["React JS"],
       title: 'ENews',
-      description: 'Vin News is the project of Implementation API by React JS, that is made for online reader to be interactive within reading those news platforms, and we have CNN News, BBC News, CNBC, VOA. we provide all of those to be used because those platforms have the great news including the most popular platform of news. hopefully you all will be pleased for reading all as both good as well as adding the useful news, Made by React JS',
+      description: 'ENews is a project implementing an API using React JS, designed to make online reading more interactive. We provide news from platforms like CNN, BBC, CNBC, and VOA, all of which offer high-quality and popular news content. We hope you enjoy reading the news, finding it both informative and useful. This project is built with React JS',
       link: 'https://vinnews.vercel.app/'
     },
     {
-      img: "project9.png",
+      img: "project3.png",
       language: ["React JS"],
       title: 'VnDribble',
-      description: 'Driible API is made by the feature of Dribble itself, i made it by applying the feature of dribble itself. it could be accessed by taking your own token instead of by just taking automatically.',
+      description: 'Dribble API is an implementation of the Dribble API.',
       link: 'https://dribblevin.vercel.app/'
     },
     {
-      img: "project2.png",
+      img: "project4.png",
       language: ["Javascript"],
       title: 'Github User Tracker',
-      description: 'This App is the implementation of API project by JavaScript. You are able to search any users who are already logged in. the result will be found automatically, depends on an user account presence and be able to get the information of the user such as the follower, name, repo, following and the status. Made by JavaScript and Bootstrap',
+      description: "This app is an API implementation project built with JavaScript. You can search for any users who are already logged in, and results will be automatically displayed based on the user's account presence. You can also retrieve user information such as followers, name, repositories, following count, and status. Built with JavaScript and Bootstrap.",
       link: 'https://egithubtracker.vercel.app/'
     },
     {
-      img: "project2.png",
+      img: "project5.png",
       language: ["Next JS"],
       title: 'My Portfolio',
-      description: 'Engxzu is an English learning platform from Indonesia owned by Ladies Of Twins. Founded in 2021 by Elvina Firmansyah with her twin sister, Elvira Firmansyah. Engxzu is an online learning application that provides a place to learn English, which will help students for solving problems in learning English. Made by Bootstrap',
+      description: "This is my portfolio, where I showcase my projects and skills in web development and programming. If you'd like to get in touch, feel free to contact me. I'm always open to discussing new opportunities, collaborations, or simply sharing knowledge.",
       link: 'https://engxzu.netlify.app/'
     },
     {
-      img: "project2.png",
+      img: "project6.png",
       language: ["HTML"],
       title: 'Engxzu, English Learning Platform',
       description: 'Engxzu is an English learning platform from Indonesia owned by Ladies Of Twins. Founded in 2021 by Elvina Firmansyah with her twin sister, Elvira Firmansyah. Engxzu is an online learning application that provides a place to learn English, which will help students for solving problems in learning English. Made by Bootstrap',
       link: 'https://engxzu.netlify.app/'
     },
     {
-      img: "project2.png",
+      img: "design1.png",
       language: ["UI/UX Design"],
       title: 'ElMovie | Movie Dashboard Design',
-      description: 'This is my new post on Dribble, i made a dashboard for a movie app platform like Netflix, honestly im inspired by Hulu. ',
+      description: 'This is one of my posts on Dribble.',
       link: 'https://engxzu.netlify.app/'
     },
     {
-      img: "project2.png",
+      img: "design2.png",
       language: ["UI/UX Design"],
       title: 'Shoes App | Mobile Design',
       description: 'This is one of my posts on Dribble. ',
       link: 'https://engxzu.netlify.app/'
     },
     {
-      img: "project2.png",
+      img: "design3.png",
       language: ["UI/UX Design"],
       title: 'Wallet App | Mobile Design',
       description: 'This is one of my posts on Dribble. ',
@@ -89,15 +89,15 @@ function Projects() {
       
       <div className="absolute z-[-1] left-1/4 before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-sky-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-sky-400 before:dark:opacity-10 after:dark:from-cyan-500 after:dark:via-[#68f0ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
       </div>
-      <div className="content flex flex-col gap-y-8">
+      <div className="content w-full md:w-3/4 flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-2">
           <h1 className={`font-bold text-6xl ${inter.className}`}>Projects</h1>
         </div>
-        <div className="grid grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-y-14">
           {projects.map((project, idx) => (
             <div className="hover:cursor-pointer rounded-xl" key={idx}>
               <div className="flex flex-col lg:flex-row gap-7">
-                <Image src={`/assets/${project.img}`} alt={project.title} className="w-[520px] h-full object-fit rounded-xl" width={650} height={650} />
+                <Image src={`/assets/${project.img}`} alt={project.title} className="w-[480px] h-[280px] object-cover rounded-xl" width={650} height={650} />
                 <div className="flex flex-col gap-y-0.5">
                   {project.language.map((v, idx) => (
                     <p className="bg-glass w-fit py-1.5 text-sky-400 px-3.5 rounded-full font-bold" key={idx}>{v}</p>
