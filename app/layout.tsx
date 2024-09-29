@@ -6,7 +6,6 @@ import Navbar from '../components/navbar/page';
 
 import { ThemeProvider } from "@/components/theme-provider";
 
-
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
