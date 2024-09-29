@@ -32,44 +32,43 @@ function Contact() {
     const { name, value } = e.target;
     setContact({ ...contact, [name]: value });
   };
-  
-  
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://script.google.com/macros/s/AKfycbwa0ffrn8MbCDWli408GY1vu4VhU-axxTofVl8MwsNJ/dev', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(contact),
+      fetch(
+        "https://script.google.com/macros/s/AKfycbzYZqfLuvVfkGmXb3GSEqAVUT7gCq4bHxE0I9uw4byxMS2w6HRczC9IZyLdQUPESE6u_g/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(contact),
+        }
+      ).then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
 
-      const data = await res.json();
-      if (data.status === 'success') {
-        alert('Form submitted successfully!');
-      } else {
-        alert('Failed to submit the form.');
-      }
+      setContact({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      setSuccess(true);
+
+      setTimeout(() => {
+        setSuccess(false);
+      }, 4000)
+
+        
     } catch (error) {
       console.error(error);
       alert('Error submitting the form.');
     }
   };
-
-  // const handleName = (e) => {
-  //   setSendName(e.target.value);
-  // }
-
-  // const handleEmail = (e) => {
-  //     setSendEmail(e.target.value);
-  // }
-
-  // const handleMessage = (e) => {
-  //     setMessage(e.target.value);
-  // }
 
   return (
     <main className={`flex flex-col items-center justify-between px-7  md:px-32 py-24`}>
@@ -96,18 +95,19 @@ function Contact() {
         </div>
 
         <div className="">
+          {success && <h2 className="bg-glass px-4 py-2.5 mb-3 rounded-xl outline outline-1 outline-green-400 text-green-400">Successfully submitted!</h2>}
           <form onSubmit={onSubmit} className="flex flex-col gap-y-4">
             <div>
               <p className="mb-2">Name</p>
-              <input name="name" type="text" placeholder="Name" onChange={handleChange} className="focus:outline focus:outline-1 focus:outline-sky-400 px-4 py-3 rounded-xl w-full dark:bg-glass bg-gray-100 dark:text-white" />
+              <input name="name" value={contact.name} type="text" placeholder="Name" onChange={handleChange} className="focus:outline focus:outline-1 focus:outline-sky-400 px-4 py-3 rounded-xl w-full dark:bg-glass bg-gray-100 dark:text-white" />
             </div>
             <div>
               <p className="mb-2">Email</p>
-              <input name="email" type="email" placeholder="Email" onChange={handleChange} className="focus:outline focus:outline-1 focus:outline-sky-400 px-4 py-3 rounded-xl w-full dark:bg-glass bg-gray-100 dark:text-white" />
+              <input name="email" value={contact.email} type="email" placeholder="Email" onChange={handleChange} className="focus:outline focus:outline-1 focus:outline-sky-400 px-4 py-3 rounded-xl w-full dark:bg-glass bg-gray-100 dark:text-white" />
             </div>
             <div>
               <p className="mb-2">Message</p>
-              <textarea name="message" placeholder="Message" onChange={handleChange} className="focus:outline focus:outline-1 focus:outline-sky-400 px-4 py-3 rounded-xl w-full dark:bg-glass bg-gray-100 dark:text-white"></textarea>
+              <textarea name="message" value={contact.message} placeholder="Message" onChange={handleChange} className="focus:outline focus:outline-1 focus:outline-sky-400 px-4 py-3 rounded-xl w-full dark:bg-glass bg-gray-100 dark:text-white"></textarea>
             </div>
             <Button variant="default" className="bg-sky-400 text-white" type="submit">Submit</Button>
           </form>

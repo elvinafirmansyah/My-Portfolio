@@ -81,7 +81,7 @@ function Skills() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {skills.map((skill, idx) => (
-            <div className="bg-glass p-5 rounded-xl" key={idx}>
+            <div className="bg-glass dark:outline-none outline outline-1 outline-gray-200 p-5 rounded-xl" key={idx}>
               <div className="flex flex-col gap-y-2">
               {skill.icon}
               <p className="font-semibold text-lg">{skill.title}</p>

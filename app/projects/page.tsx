@@ -10,7 +10,8 @@ import { TbBrandLaravel } from "react-icons/tb";
 import { SiAdobexd, SiAdobephotoshop, SiPhotobucket } from "react-icons/si";
 import { Icon } from '@iconify/react';
 import { FaGit } from "react-icons/fa6";
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink, FaDribbble  } from "react-icons/fa";
+import { AiFillDribbbleCircle } from "react-icons/ai";
 import { Button } from "@/components/ui/button"
 
 
@@ -21,7 +22,7 @@ function Projects() {
   const projects = [
     {
       img: "project1.png",
-      language: ["Javascript"],
+      language: ["HTML", "CSS", "Javascript"],
       title: 'Incriaysc',
       description: 'Incriaysc is a platform for searching any word using JavaScript. It is designed to help English learners easily understand the meaning of specific words. Built with JavaScript and Tailwind.',
       link: 'https://incriaysc.vercel.app/'
@@ -42,7 +43,7 @@ function Projects() {
     },
     {
       img: "project4.png",
-      language: ["Javascript"],
+      language: ["HTML", "CSS", "Javascript"],
       title: 'Github User Tracker',
       description: "This app is an API implementation project built with JavaScript. You can search for any users who are already logged in, and results will be automatically displayed based on the user's account presence. You can also retrieve user information such as followers, name, repositories, following count, and status. Built with JavaScript and Bootstrap.",
       link: 'https://egithubtracker.vercel.app/'
@@ -52,11 +53,11 @@ function Projects() {
       language: ["Next JS"],
       title: 'My Portfolio',
       description: "This is my portfolio, where I showcase my projects and skills in web development and programming. If you'd like to get in touch, feel free to contact me. I'm always open to discussing new opportunities, collaborations, or simply sharing knowledge.",
-      link: 'https://engxzu.netlify.app/'
+      link: 'https://elvina.vercel.app/'
     },
     {
       img: "project6.png",
-      language: ["HTML"],
+      language: ["HTML", "CSS", "Javascript"],
       title: 'Engxzu, English Learning Platform',
       description: 'Engxzu is an English learning platform from Indonesia owned by Ladies Of Twins. Founded in 2021 by Elvina Firmansyah with her twin sister, Elvira Firmansyah. Engxzu is an online learning application that provides a place to learn English, which will help students for solving problems in learning English. Made by Bootstrap',
       link: 'https://engxzu.netlify.app/'
@@ -64,23 +65,37 @@ function Projects() {
     {
       img: "design1.png",
       language: ["UI/UX Design"],
-      title: 'ElMovie | Movie Dashboard Design',
+      title: 'ElMovie',
       description: 'This is one of my posts on Dribble.',
-      link: 'https://engxzu.netlify.app/'
+      link: 'https://dribbble.com/shots/18497469-ElMovie-Movie-Dashboard-Design'
     },
     {
       img: "design2.png",
       language: ["UI/UX Design"],
-      title: 'Shoes App | Mobile Design',
+      title: 'Shoes App',
       description: 'This is one of my posts on Dribble. ',
-      link: 'https://engxzu.netlify.app/'
+      link: 'https://dribbble.com/shots/17081283-Shoes-App-Mobile-Design'
+    },
+    {
+      img: "design2.png",
+      language: ["UI/UX Design"],
+      title: 'Shoes App',
+      description: 'This is one of my posts on Dribble. ',
+      link: 'https://dribbble.com/shots/17081283-Shoes-App-Mobile-Design'
     },
     {
       img: "design3.png",
       language: ["UI/UX Design"],
-      title: 'Wallet App | Mobile Design',
+      title: 'Wallet App',
       description: 'This is one of my posts on Dribble. ',
-      link: 'https://engxzu.netlify.app/'
+      link: 'https://dribbble.com/shots/17081347-Wallet-App'
+    },
+    {
+      img: "design4.png",
+      language: ["UI/UX Design"],
+      title: 'Online Course App',
+      description: 'This is one of my posts on Dribble. ',
+      link: 'https://dribbble.com/shots/20269467-Online-Course-App'
     },
     
   ]
@@ -97,18 +112,16 @@ function Projects() {
           {projects.map((project, idx) => (
             <div className="hover:cursor-pointer rounded-xl" key={idx}>
               <div className="flex flex-col lg:flex-row gap-7">
-                <Image src={`/assets/${project.img}`} alt={project.title} className="w-[480px] h-[280px] object-cover rounded-xl" width={650} height={650} />
+                <Image src={`/assets/${project.img}`} alt={project.title} className="w-[480px] h-[280px] object-cover rounded-xl" width={700} height={700} />
                 <div className="flex flex-col gap-y-0.5">
+                  <div className="flex gap-2 flex-wrap">
                   {project.language.map((v, idx) => (
-                    <p className="bg-glass w-fit py-1.5 text-sky-400 px-3.5 rounded-full font-bold" key={idx}>{v}</p>
+                    <p className="dark:bg-glass bg-gray-100 text-sky-400 w-fit py-1.5 dark:text-sky-400 px-3.5 rounded-full font-bold" key={idx}>{v}</p>
                   ))}
-                  <h1 className={`font-black text-[30px] ${inter.className}`}>{project.title}</h1>
-                  <p>{}</p>
-                  <p className="text-base">{project.description}</p>
-                  <div className="flex gap-x-3 mt-3">
-                  <Button variant="default" className="flex gap-x-2 text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><FaGithub />{project.language[0] == "UI/UX Design" ? "Dribble" : "Github"}</Button>
-                  <Button variant="default" className="flex gap-x-2 text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><FaLink />Demo</Button>
                   </div>
+                  <h1 className={`font-black text-[30px] ${inter.className}`}>{project.title}</h1>
+                  <p className="text-base">{project.description}</p>
+                  <Button variant="default" className="w-fit mt-3 text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><Link href={project.link} target="_blank" className="flex gap-x-2 justify-center items-center"><FaLink />Demo</Link></Button>
                 </div>
               </div>
             </div>
