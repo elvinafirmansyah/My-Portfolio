@@ -38,22 +38,22 @@ function Achievements() {
       description: 'Indonesian Ministry of Education (Kemendikbud)',
       link: 'https://vinnews.vercel.app/'
     },
-    {
-      img: "sertifikat1.jpg",
-      medal: "🥈",
-      skills: ['Laravel', 'HTML&CSS', 'Figma', 'Bootstrap', 'Javascript'],
-      title: '2nd Place in the South Sumatra Provincial Student Skills Competition (LKS) 2024 - Web Technology',
-      description: 'Indonesian Ministry of Education (Kemendikbud)',
-      link: 'https://elvn-blindmaze-game.vercel.app/'
-    },
-    {
-      img: "sertifikat2.jpg",
-      skills: ['Laravel', 'React', 'Bootstrap', 'Wordpress'],
-      medal: "🥇",
-      title: '1st Place in the Palembang City Student Skills Competition (LKS) 2024 - Web Technology',
-      description: 'Indonesian Ministry of Education (Kemendikbud)',
-      link: 'https://incriaysc.vercel.app/'
-    },
+    // {
+    //   img: "sertifikat1.jpg",
+    //   medal: "🥈",
+    //   skills: ['Laravel', 'HTML&CSS', 'Figma', 'Bootstrap', 'Javascript'],
+    //   title: '2nd Place in the South Sumatra Provincial Student Skills Competition (LKS) 2024 - Web Technology',
+    //   description: 'Indonesian Ministry of Education (Kemendikbud)',
+    //   link: 'https://elvn-blindmaze-game.vercel.app/'
+    // },
+    // {
+    //   img: "sertifikat2.jpg",
+    //   skills: ['Laravel', 'React', 'Bootstrap', 'Wordpress'],
+    //   medal: "🥇",
+    //   title: '1st Place in the Palembang City Student Skills Competition (LKS) 2024 - Web Technology',
+    //   description: 'Indonesian Ministry of Education (Kemendikbud)',
+    //   link: 'https://incriaysc.vercel.app/'
+    // },
     {
       img: "sertifikat3.png",
       skills: ['Figma', 'Next JS', 'Shadcn UI'],
