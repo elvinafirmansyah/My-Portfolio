@@ -35,13 +35,6 @@ function Projects() {
       link: 'https://github.com/elvinafirmansyah/VnProductionApp'
     },
     {
-      img: "project7.png",
-      language: ["HTML", "Tailwind", "Javascript", "Canvas"],
-      title: 'BlindMaze Game',
-      description: 'BlindMaze is a thrilling and challenging maze navigation game where players must guide their character through an intricate maze with limited visibility. In this game, the maze is only partially revealed, and the player must rely on their memory and quick reflexes to navigate through the maze and reach the exit before time runs out. Made by Javascript',
-      link: 'https://elvn-blindmaze-game.vercel.app/'
-    },
-    {
       img: "project5.png",
       language: ["Next JS"],
       title: 'My Portfolio',
