@@ -35,7 +35,7 @@ function About() {
         </div>
         <p className={`w-full text-lg tracking-tighter`}>I&apos;m Elvina Firmansyah. I&apos;m a Full-Stack Developer and UI/UX Designer based in Indonesia. I&apos;m passionate about coding, developing and designing various websites as well as working on projects related to web development and UI/UX design. I&apos;ve been coding for the past 2 years and have enjoyed every moment of it. My main focus is to create accessible knowledge and digital experiences both in my career and for the future.</p>
         <div className="flex flex-col gap-y-3">
-        <Button variant="default" className="w-fit text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><Link href='/assets/cv.pdf' target="_blank">Resume</Link></Button>
+        <Button variant="default" className="w-fit text-md hover:bg-sky-400 hover:text-white bg-glass text-sky-400"><Link href='/assets/resume.pdf' target="_blank">Resume</Link></Button>
           <Link href='/projects' className='flex gap-x-2 mt-2.5 items-center hover:underline hover:underline-offset-4'>
             See More Projects
             <FaLongArrowAltRight className='animation-link' />

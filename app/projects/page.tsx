@@ -35,6 +35,13 @@ function Projects() {
       link: 'https://github.com/elvinafirmansyah/VnProductionApp'
     },
     {
+      img: "project12.png",
+      language: ["Javascript", "PHP", "HTML", "CSS"],
+      title: 'Science Chase',
+      description: "Science Chase is an educational maze game that combines physical activity within the game with science knowledge testing. Players can choose various study topics, such as the Human Skeleton and Senses, the Structure and Function of Plant Parts, and others.",
+      link: 'https://github.com/elvinafirmansyah/Science-Chase'
+    },
+    {
       img: "project5.png",
       language: ["Next JS"],
       title: 'My Portfolio',
