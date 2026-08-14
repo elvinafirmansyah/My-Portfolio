@@ -31,12 +31,28 @@ function Achievements() {
     //   link: 'https://elvn-blindmaze-game.vercel.app/'
     // },
     {
-      img: "sertifikat5.jpg",
+      img: "sertifikat8.jpg",
+      skills: ['Laravel', 'React', 'Javascript', 'HTML', 'CSS'],
       medal: "🥇",
-      skills: ['Laravel', 'React', 'Bootstrap', 'Wordpress'],
-      title: '1st Place in the Palembang City Student Skills Competition (LKS) 2025 - Web Technology',
+      title: '3rd Place in the National Student Skills Competition (LKS Dikmen) 2026 – Web Technologies',
       description: 'Indonesian Ministry of Education (Kemendikbud)',
-      link: 'https://vinnews.vercel.app/'
+      link: 'https://elvina.vercel.app/'
+    },
+    {
+      img: "sertifikat7.jpeg",
+      skills: ['Laravel', 'React', 'Bootstrap', 'Javascript', 'HTML', 'CSS'],
+      medal: "🥇",
+      title: '2nd Place in the South Sumatra Provincial Student Skills Competition (LKS Dikmen) 2026 – Web Technologies',
+      description: 'Indonesian Ministry of Education (Kemendikbud)',
+      link: 'https://elvina.vercel.app/'
+    },
+    {
+      img: "sertifikat6.jpeg",
+      skills: ['Laravel', 'React', 'Bootstrap', 'Javascript', 'HTML', 'CSS'],
+      medal: "🥇",
+      title: '1st Place in the Palembang City Student Skills Competition (LKS Dikmen) 2026 – Web Technologies',
+      description: 'Indonesian Ministry of Education (Kemendikbud)',
+      link: 'https://elvina.vercel.app/'
     },
     // {
     //   img: "sertifikat1.jpg",
@@ -60,7 +76,7 @@ function Achievements() {
       medal: "🥈",
       title: '2nd Place in HIMIKA CUP PART-V 2024 - UI/UX Design',
       description: "Indonesian Ministry of Education (Kemendikbud)",
-      link: 'https://indonesiaemas2045.vercel.app/'
+      link: 'https://elvina.vercel.app/'
     },
     {
       img: "sertifikat4.png",
@@ -68,9 +84,8 @@ function Achievements() {
       medal: "🥉",
       title: '3rd Place in DE CODE Web Design Competition 2024 - UI/UX Design',
       description: "Indonesian Ministry of Education (Kemendikbud)",
-      link: 'https://indonesiaemas2045.vercel.app/'
+      link: 'https://elvina.vercel.app/'
     },
-    
     
   ]
   return (
@@ -85,7 +100,7 @@ function Achievements() {
           {sertifikats.map((sertifikat, idx) => (
               <div className="rounded-xl" key={idx}>
                 <div className="flex flex-col gap-2">
-                  <Image src={`/assets/${sertifikat.img}`} alt={sertifikat.title} className="w-[480px] h-[280px] object-cover rounded-xl" width={480} height={280} />
+                  <Image src={`/assets/${sertifikat.img}`} alt={sertifikat.title} className="w-[480px] h-[305px] object-cover rounded-xl" width={480} height={305} />
                   <div className="flex flex-col gap-y-0.5">
                     <div className="flex gap-2 mt-2 flex-wrap">
                       {sertifikat.skills.map((v, idx) => (
