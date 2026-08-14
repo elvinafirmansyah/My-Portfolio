@@ -33,7 +33,7 @@ function Achievements() {
     {
       img: "sertifikat8.jpg",
       skills: ['Laravel', 'React', 'Javascript', 'HTML', 'CSS'],
-      medal: "🥇",
+      medal: "🥉",
       title: '3rd Place in the National Student Skills Competition (LKS Dikmen) 2026 – Web Technologies',
       description: 'Indonesian Ministry of Education (Kemendikbud)',
       link: 'https://elvina.vercel.app/'
