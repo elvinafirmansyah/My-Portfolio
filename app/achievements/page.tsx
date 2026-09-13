@@ -43,7 +43,7 @@ function Achievements() {
       skills: ['Laravel', 'React', 'Bootstrap', 'Javascript', 'HTML', 'CSS'],
       medal: "🥇",
       title: '1st Place in the South Sumatra Provincial Student Skills Competition (LKS Dikmen) 2026 – Web Technologies',
-      description: 'Indonesian Ministry of Education (Kemendikbud)',
+      description: 'Indonesian Ministry of Educsation (Kemendikbud)',
       link: 'https://elvina.vercel.app/'
     },
     {
